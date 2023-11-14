@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Driver License</title>
+
+  <style>
+    div{
+      width: 30%;
+      margin: 3em auto;
+      padding: 1em 5em 5em;
+      box-shadow: 1em 0 3em 0;
+      background-color: rgba(43, 226, 153, 0.698);
+    }
+
+  </style>
+</head>
+<body>
+<div>
+  <h1>Driver License Registration</h1>
+  <input type="text" name="" id="input1" placeholder="Input your Age">
+  <button onclick="show()">register</button>
+  <h1 id="sho"></h1>
+</div>
+</body>
+</html>
+<script>
+  let sho  = document.getElementById('sho')
+  let input1 = document.getElementById('input1')
+
+  function show() {
+  if (input1.value >= 18) {
+    // alert('You are eligible to drive')
+    sho.innerHTML = 'Congratulation💃💃 You are eligible to drive'
+  } else {
+    sho.innerHTML = 'You are not eligible for driver License'
+  }
+}
+
+</script>
