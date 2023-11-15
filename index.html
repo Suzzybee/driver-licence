@@ -13,15 +13,31 @@
       box-shadow: 1em 0 3em 0;
       background-color: rgba(43, 226, 153, 0.698);
     }
+    @media (max-width: 768px) {
+      div{
+        width: 50%;
+        padding: 1em;
+      }
+    }
+    @media (max-width: 483px) {
+      input{
+        width: 50%;
+      }
+    }
+    @media (max-width: 320px) {
+      div{
+        width: 70%;
+      }
+    }
 
   </style>
 </head>
 <body>
 <div>
-  <h1>Driver License Registration</h1>
+  <h3>Driver License Registration</h3>
   <input type="text" name="" id="input1" placeholder="Input your Age">
   <button onclick="show()">register</button>
-  <h1 id="sho"></h1>
+  <h5 id="sho"></h5>
 </div>
 </body>
 </html>
@@ -32,9 +48,12 @@
   function show() {
   if (input1.value >= 18) {
     // alert('You are eligible to drive')
-    sho.innerHTML = 'Congratulation💃💃 You are eligible to drive'
-  } else {
-    sho.innerHTML = 'You are not eligible for driver License'
+    sho.innerHTML = 'Congratulation!!!💃 You are eligible to drive'
+  } else if (input1.value <= 10) {
+    sho.innerHTML = 'You are still a minor dude.🙄'
+  }
+  else {
+    sho.innerHTML = `You are not eligible, you are not yet 18years. You are left with ${18 - input1.value}years to drive.  `
   }
 }
 
